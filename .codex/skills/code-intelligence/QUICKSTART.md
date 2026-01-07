@@ -12,25 +12,53 @@ LSP-powered code analysis for Codex CLI. Get started in 5 minutes!
 
 ## Step 1: Install LSP Server (One-Time)
 
-Choose your language:
+Choose your language(s):
 
-### JavaScript/TypeScript
+### Most Popular
+
+**JavaScript/TypeScript**
 ```bash
 npm install -g typescript-language-server typescript
 ```
 
-### Python
+**Python**
 ```bash
 pip install pyright
 ```
 
-### Go
+**Java**
+```bash
+# Download from: https://download.eclipse.org/jdtls/snapshots/
+```
+
+**Go**
 ```bash
 go install golang.org/x/tools/gopls@latest
 ```
 
-### Others
-See README.md for more languages
+**C#/.NET**
+```bash
+dotnet tool install -g csharp-ls
+```
+
+**C/C++**
+```bash
+# macOS: brew install llvm
+# Linux: sudo apt install clangd
+# Windows: choco install llvm
+```
+
+### More Languages Supported
+
+**Mobile**: Swift, Kotlin, Dart/Flutter
+**Web**: PHP, HTML/CSS, Ruby
+**Data Science**: R, Julia, SQL
+**DevOps**: Terraform, Docker, YAML, Bash
+**Systems**: Rust, Zig
+**Functional**: Haskell, Scala, Clojure, Erlang
+**Other**: Lua, Perl, LaTeX
+
+See README.md for complete installation instructions for 40+ languages!
 
 ## Step 2: It Just Works!
 

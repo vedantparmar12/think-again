@@ -8,11 +8,11 @@ Four powerful skills for OpenAI Codex CLI that enable systematic development wor
 
 ## 🎉 What's New in v1.1.0
 
-**LSP Integration** - IDE-like code intelligence now available!
+**LSP Integration** - IDE-like code intelligence for 40+ languages!
 - Go to Definition, Find References, Hover Info, Call Hierarchy
 - Automatically enhances ultrathink and plan-mode
 - More accurate code analysis and dependency mapping
-- Supports JavaScript/TypeScript, Python, Go, Rust, Java, C/C++ and more
+- **40+ Languages**: JavaScript/TypeScript, Python, Java, C#, Go, Rust, Swift, Kotlin, PHP, Ruby, Scala, Elixir, R, Julia, Terraform, Docker, and many more!
 
 [See Release Notes](RELEASE_NOTES_v1.1.0.md)
 

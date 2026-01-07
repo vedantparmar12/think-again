@@ -116,63 +116,278 @@ You can also use code intelligence directly:
 
 ## Supported Languages
 
-### Fully Supported (LSP servers available)
-- ✅ **JavaScript/TypeScript** - `typescript-language-server`
-- ✅ **Python** - `pyright` or `pylsp`
-- ✅ **Java** - `jdtls`
-- ✅ **Go** - `gopls`
-- ✅ **Rust** - `rust-analyzer`
-- ✅ **C/C++** - `clangd`
+### Web & Frontend
+- ✅ **JavaScript/TypeScript** - `typescript-language-server` - Web, Node.js, React, Vue, Angular
+- ✅ **HTML/CSS** - `vscode-html-language-server`, `vscode-css-language-server`
+- ✅ **PHP** - `intelephense` - WordPress, Laravel, Symfony
+- ✅ **Dart** - `dart analyze` - Flutter mobile development
 
-### Partial Support
-- 🟡 **Ruby** - `solargraph`
-- 🟡 **PHP** - `intelephense`
-- 🟡 **C#** - `omnisharp`
+### Backend & Enterprise
+- ✅ **Java** - `jdtls` - Spring Boot, Jakarta EE, Android
+- ✅ **C#/.NET** - `omnisharp` - ASP.NET, Blazor, Unity
+- ✅ **Kotlin** - `kotlin-language-server` - Android, Spring, Ktor
+- ✅ **Scala** - `metals` - Spark, Akka, Play Framework
+- ✅ **Go** - `gopls` - Microservices, Docker, Kubernetes tools
+- ✅ **Rust** - `rust-analyzer` - Systems programming, WebAssembly
+- ✅ **Elixir** - `elixir-ls` - Phoenix, distributed systems
+- ✅ **Ruby** - `solargraph` - Rails, Sinatra
 
-### Requires Manual Setup
-- ⚙️ **Kotlin**
-- ⚙️ **Swift**
-- ⚙️ **Scala**
+### Mobile Development
+- ✅ **Swift** - `sourcekit-lsp` - iOS, macOS development
+- ✅ **Kotlin** - `kotlin-language-server` - Android development
+- ✅ **Dart** - `dart analyze` - Flutter cross-platform
+
+### Systems & Low-Level
+- ✅ **C/C++** - `clangd` - Embedded, OS, performance-critical
+- ✅ **Rust** - `rust-analyzer` - Systems, blockchain, embedded
+- ✅ **Zig** - `zls` - Systems programming
+- ✅ **Assembly** - Limited support via extensions
+
+### Data Science & Analytics
+- ✅ **Python** - `pyright` or `pylsp` - ML, Data Science, Django, FastAPI
+- ✅ **R** - `languageserver` - Statistics, data analysis
+- ✅ **Julia** - `LanguageServer.jl` - Scientific computing
+- ✅ **SQL** - `sqls` - Database queries
+
+### DevOps & Infrastructure
+- ✅ **Terraform** - `terraform-ls` - Infrastructure as Code
+- ✅ **Docker** - `docker-langserver` - Dockerfile support
+- ✅ **YAML** - `yaml-language-server` - Kubernetes, CI/CD configs
+- ✅ **JSON** - `vscode-json-language-server` - Config files
+- ✅ **Bash/Shell** - `bash-language-server` - Scripting
+
+### Other Industry Languages
+- ✅ **Lua** - `lua-language-server` - Game dev, embedded scripting
+- ✅ **Haskell** - `haskell-language-server` - Functional programming
+- ✅ **Clojure** - `clojure-lsp` - Functional, JVM
+- ✅ **OCaml** - `ocamllsp` - Functional programming
+- ✅ **Erlang** - `erlang_ls` - Telecom, distributed systems
+- ✅ **Perl** - `Perl::LanguageServer` - Legacy systems, sysadmin
+- ✅ **LaTeX** - `texlab` - Academic writing, documentation
 
 ## Installation of LSP Servers
 
 Code Intelligence requires LSP servers to be installed for your languages.
 
-### JavaScript/TypeScript
+### Web & Frontend
+
+#### JavaScript/TypeScript
 ```bash
 npm install -g typescript-language-server typescript
 ```
 
-### Python
+#### HTML/CSS
 ```bash
-pip install pyright
-# or
-pip install python-lsp-server
+npm install -g vscode-langservers-extracted
 ```
 
-### Go
+#### PHP
+```bash
+npm install -g intelephense
+```
+
+#### Dart (Flutter)
+```bash
+# Comes with Dart SDK
+dart pub global activate dart_language_server
+```
+
+### Backend & Enterprise
+
+#### Java
+```bash
+# Download Eclipse JDT Language Server
+# https://download.eclipse.org/jdtls/snapshots/
+# Or use your IDE's bundled version
+```
+
+#### C# / .NET
+```bash
+# Install .NET SDK first, then:
+dotnet tool install -g csharp-ls
+# or use OmniSharp
+# https://github.com/OmniSharp/omnisharp-roslyn/releases
+```
+
+#### Kotlin
+```bash
+# Download from GitHub
+# https://github.com/fwcd/kotlin-language-server/releases
+```
+
+#### Scala
+```bash
+# Install Coursier, then:
+cs install metals
+```
+
+#### Go
 ```bash
 go install golang.org/x/tools/gopls@latest
 ```
 
-### Rust
+#### Rust
 ```bash
 rustup component add rust-analyzer
 ```
 
-### Java
-Download from: https://github.com/eclipse/eclipse.jdt.ls
+#### Elixir
+```bash
+# Download from GitHub
+# https://github.com/elixir-lsp/elixir-ls/releases
+```
 
-### C/C++
+#### Ruby
+```bash
+gem install solargraph
+```
+
+### Mobile Development
+
+#### Swift (iOS/macOS)
+```bash
+# Comes with Xcode
+# Or install Swift toolchain:
+# https://swift.org/download/
+```
+
+#### Kotlin (Android)
+```bash
+# See Backend & Enterprise section above
+```
+
+#### Dart (Flutter)
+```bash
+# See Web & Frontend section above
+```
+
+### Systems & Low-Level
+
+#### C/C++
 ```bash
 # macOS
 brew install llvm
 
 # Ubuntu/Debian
-apt install clangd
+sudo apt install clangd
 
-# Windows
-# Download from LLVM releases
+# Windows (with Chocolatey)
+choco install llvm
+
+# Or download from: https://releases.llvm.org/
+```
+
+#### Zig
+```bash
+# Install Zig, then:
+# zls comes with Zig or install separately
+# https://github.com/zigtools/zls/releases
+```
+
+### Data Science & Analytics
+
+#### Python
+```bash
+# Pyright (recommended)
+pip install pyright
+
+# or Python Language Server
+pip install python-lsp-server
+
+# or Jedi Language Server
+pip install -U jedi-language-server
+```
+
+#### R
+```R
+# In R console:
+install.packages("languageserver")
+```
+
+#### Julia
+```julia
+# In Julia REPL:
+using Pkg
+Pkg.add("LanguageServer")
+```
+
+#### SQL
+```bash
+go install github.com/lighttiger2505/sqls@latest
+```
+
+### DevOps & Infrastructure
+
+#### Terraform
+```bash
+# Download from HashiCorp
+# https://releases.hashicorp.com/terraform-ls/
+# Or use package manager:
+brew install terraform-ls  # macOS
+choco install terraform-ls # Windows
+```
+
+#### Docker
+```bash
+npm install -g dockerfile-language-server-nodejs
+```
+
+#### YAML
+```bash
+npm install -g yaml-language-server
+```
+
+#### JSON
+```bash
+npm install -g vscode-langservers-extracted
+```
+
+#### Bash/Shell
+```bash
+npm install -g bash-language-server
+```
+
+### Other Industry Languages
+
+#### Lua
+```bash
+# Download from GitHub
+# https://github.com/LuaLS/lua-language-server/releases
+```
+
+#### Haskell
+```bash
+ghcup install hls
+```
+
+#### Clojure
+```bash
+# Download from GitHub
+# https://github.com/clojure-lsp/clojure-lsp/releases
+```
+
+#### OCaml
+```bash
+opam install ocaml-lsp-server
+```
+
+#### Erlang
+```bash
+# Download from GitHub
+# https://github.com/erlang-ls/erlang_ls/releases
+```
+
+#### Perl
+```bash
+cpan Perl::LanguageServer
+```
+
+#### LaTeX
+```bash
+# Rust-based (recommended)
+cargo install --git https://github.com/latex-lsp/texlab
+
+# Or download binary from GitHub releases
 ```
 
 ## How It Works
