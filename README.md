@@ -1,28 +1,48 @@
 # Think Again: Codex Thinking Skills
 
-Three powerful skills for OpenAI Codex CLI that enable systematic development workflows.
+Four powerful skills for OpenAI Codex CLI that enable systematic development workflows with LSP-powered code intelligence.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![License](https://img.shields.io/badge/license-Free-green)
 
+## 🎉 What's New in v1.1.0
+
+**LSP Integration** - IDE-like code intelligence now available!
+- Go to Definition, Find References, Hover Info, Call Hierarchy
+- Automatically enhances ultrathink and plan-mode
+- More accurate code analysis and dependency mapping
+- Supports JavaScript/TypeScript, Python, Go, Rust, Java, C/C++ and more
+
+[See Release Notes](RELEASE_NOTES_v1.1.0.md)
+
 ## 🎯 What Are These Skills?
 
-Transform your Codex CLI experience with three complementary skills:
+Transform your Codex CLI experience with four complementary skills:
 
-### 🧠 **Ultrathink**
+### 🔍 **Code Intelligence** (NEW!)
+LSP-powered code analysis for deeper understanding
+- Go to Definition - Find where symbols are defined
+- Find All References - See all usages across codebase
+- Hover Information - Get type info and documentation
+- Call Hierarchy - Understand function relationships
+- Automatically integrates with ultrathink and plan-mode
+
+### 🧠 **Ultrathink** (Enhanced with LSP!)
 Deep reasoning mode for complex problems
 - Think step-by-step through debugging and architecture decisions
 - Explore multiple approaches before committing
 - Validate assumptions and catch issues early
 - Show transparent reasoning process
+- Now uses LSP for accurate code analysis
 
-### 📋 **Plan Mode**
+### 📋 **Plan Mode** (Enhanced with LSP!)
 Read-only planning before implementation
 - Analyze codebase without making changes
 - Create detailed ExecPlan documents with milestones
 - Document architectural decisions
 - Get approval before executing
+- LSP-powered dependency mapping
 
 ### ✅ **Execute Plan**
 Systematic milestone-by-milestone implementation
@@ -35,14 +55,14 @@ Systematic milestone-by-milestone implementation
 
 ### Download
 
-**Latest Release:** [codex-thinking-skills-v1.0.0.zip](../../releases/latest)
+**Latest Release:** [codex-thinking-skills-v1.1.0.zip](codex-thinking-skills-v1.1.0.zip)
 
 ### Installation
 
 #### Windows
 ```powershell
 # Extract the zip, then from the extracted folder:
-Copy-Item -Recurse ultrathink,plan-mode,execute-plan "$env:USERPROFILE\.codex\skills\"
+Copy-Item -Recurse ultrathink,plan-mode,execute-plan,code-intelligence "$env:USERPROFILE\.codex\skills\"
 
 # Restart Codex
 exit
@@ -52,12 +72,29 @@ codex
 #### macOS / Linux
 ```bash
 # Extract the zip, then from the extracted folder:
-cp -r ultrathink plan-mode execute-plan ~/.codex/skills/
+cp -r ultrathink plan-mode execute-plan code-intelligence ~/.codex/skills/
 
 # Restart Codex
 exit
 codex
 ```
+
+### Install LSP Servers (Optional but Recommended)
+
+For full code intelligence features:
+
+```bash
+# JavaScript/TypeScript
+npm install -g typescript-language-server typescript
+
+# Python
+pip install pyright
+
+# Go
+go install golang.org/x/tools/gopls@latest
+```
+
+See [code-intelligence/QUICKSTART.md](code-intelligence/QUICKSTART.md) for more languages.
 
 ### Verify Installation
 ```bash
@@ -68,6 +105,7 @@ codex
 # ✅ ultrathink - Deep reasoning mode for complex problems
 # ✅ plan-mode - Create implementation plans before coding
 # ✅ execute-plan - Execute approved implementation plans
+# ✅ code-intelligence - LSP-powered code analysis
 ```
 
 ## 💡 Usage Examples
@@ -116,23 +154,26 @@ All documentation is included in the download:
 
 ## 📦 What's Included
 
-- **ultrathink/** - Deep reasoning skill
-- **plan-mode/** - Planning skill  
+- **code-intelligence/** - NEW! LSP-powered code analysis
+- **ultrathink/** - Deep reasoning skill (Enhanced with LSP)
+- **plan-mode/** - Planning skill (Enhanced with LSP)
 - **execute-plan/** - Execution skill
 - Complete documentation and examples
 - Helper scripts and templates
+- LSP integration guides
 
 ## 🚀 Get Started
 
-1. **Download**: [codex-thinking-skills-v1.0.0.zip](../../releases/latest)
+1. **Download**: [codex-thinking-skills-v1.1.0.zip](codex-thinking-skills-v1.1.0.zip)
 2. **Extract**: Unzip to a temporary location
 3. **Install**: Copy skills to `~/.codex/skills/`
-4. **Restart**: Restart Codex CLI
-5. **Verify**: Run `/skills`
-6. **Test**: Try `/ultrathink What is recursion?`
+4. **Install LSP** (optional): Install LSP servers for your languages
+5. **Restart**: Restart Codex CLI
+6. **Verify**: Run `/skills`
+7. **Test**: Try `/ultrathink Where is UserService defined?`
 
 ---
 
-**Transform your development workflow with systematic thinking!** 🧠📋✅
+**Transform your development workflow with systematic thinking and LSP-powered code intelligence!** 🔍🧠📋✅
 
-*Version 1.0.0 | January 2026*
+*Version 1.1.0 | January 2026*
