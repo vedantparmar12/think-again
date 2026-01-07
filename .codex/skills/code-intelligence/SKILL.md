@@ -3,7 +3,7 @@ name: code-intelligence
 description: Enhanced code analysis using LSP 3.17 (Language Server Protocol). Provides go-to-definition, find-references, hover info, symbol search, PLUS inlay hints, code lens, type hierarchy, semantic tokens, folding ranges, pull diagnostics, inline values, linked editing, and enhanced call hierarchy for comprehensive code intelligence. Automatically integrates with all skills.
 metadata:
   short-description: Advanced LSP-powered code analysis (LSP 3.17)
-  version: 1.4.0
+  version: 2.0.0
   author: Custom
   tags: [lsp, analysis, code-intelligence, navigation, inlay-hints, code-lens, type-hierarchy, semantic-tokens, pull-diagnostics, inline-values, debugging]
   integrates-with: [ultrathink, plan-mode, code-review, test-generator, bug-hunter, refactor-assistant, doc-generator, execute-plan]
