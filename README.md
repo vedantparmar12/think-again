@@ -1,12 +1,37 @@
 # Think Again: Codex Thinking Skills
 
+> **📦 Release Branch: v1.3.0** - This branch contains the stable v1.3.0 release with advanced LSP 3.17 features.
+
 Nine powerful skills for OpenAI Codex CLI that provide a complete development workflow with advanced LSP 3.17-powered code intelligence.
 
 ![Version](https://img.shields.io/badge/version-1.3.0-blue)
+![Branch](https://img.shields.io/badge/branch-release%2Fv1.3.0-orange)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![License](https://img.shields.io/badge/license-Free-green)
 ![Skills](https://img.shields.io/badge/skills-9-brightgreen)
 ![LSP](https://img.shields.io/badge/LSP-3.17-orange)
+
+**🔗 Quick Links:** [Main Branch](../../tree/main) | [All Releases](../../releases) | [Report Issue](../../issues)
+
+---
+
+## 📑 Table of Contents
+
+- [What's New in v1.3.0](#-whats-new-in-v130)
+- [Branch Information](#-branch-information)
+- [What Are These Skills?](#-what-are-these-skills)
+- [Quick Start](#-quick-start)
+- [Usage Examples](#-usage-examples)
+- [The Complete Workflow](#-the-complete-workflow)
+- [LSP 3.17 Features in Action](#-lsp-317-features-in-action)
+- [Real-World Impact](#-real-world-impact)
+- [Documentation](#-documentation)
+- [System Requirements](#-system-requirements)
+- [Language Support](#-language-support)
+- [Contributing](#-contributing)
+- [Support](#-support)
+
+---
 
 ## 🎉 What's New in v1.3.0
 
@@ -24,6 +49,38 @@ Nine powerful skills for OpenAI Codex CLI that provide a complete development wo
 **Impact:** 66% faster workflows | 95% bug detection accuracy | Zero configuration needed
 
 [See Release Notes](RELEASE_NOTES_v1.3.0.md) | [v1.2.0 Notes](RELEASE_NOTES_v1.2.0.md) | [v1.1.0 Notes](RELEASE_NOTES_v1.1.0.md)
+
+---
+
+## 🌿 Branch Information
+
+This repository uses a branching strategy for releases:
+
+- **`main`** - Latest stable code with all features
+- **`release/v1.3.0`** (YOU ARE HERE) - Stable v1.3.0 release with LSP 3.17
+- **`release/v1.2.0`** - Previous stable release
+- **`develop`** - Development branch (may be unstable)
+
+**For production use, always use a release branch!**
+
+### What's in This Branch?
+
+This `release/v1.3.0` branch contains:
+
+✅ **All 9 production-ready skills** with LSP 3.17 enhancements
+✅ **Complete documentation** including LSP research and implementation guides
+✅ **Pre-packaged ZIP file** ready for distribution
+✅ **Tested and stable** code for production use
+✅ **Zero breaking changes** from v1.2.0 - fully backward compatible
+
+**Files included:**
+- `.codex/skills/` - All 9 enhanced skills
+- `RELEASE_NOTES_v1.3.0.md` - Complete release notes
+- `LSP_RESEARCH_SUMMARY.md` - LSP 3.17 research documentation
+- `LSP_ENHANCEMENTS_v1.3.0.md` - Technical specifications
+- `LSP_ENHANCEMENTS_EXAMPLES.md` - Before/after examples
+- `IMPLEMENTATION_GUIDE_INLAY_HINTS.md` - Implementation guide
+- `codex-thinking-skills-v1.3.0.zip` - Ready-to-install package
 
 ---
 
@@ -139,11 +196,32 @@ Automated documentation from code
 
 ## 🚀 Quick Start
 
-### Download
+### Option 1: Install Directly from GitHub (Recommended)
+
+Clone this release branch directly:
+
+```bash
+# Clone the release branch
+git clone -b release/v1.3.0 https://github.com/vedantparmar12/think-again.git
+cd think-again
+
+# Copy skills to Codex directory
+# Windows PowerShell:
+Copy-Item -Recurse .codex/skills/* "$env:USERPROFILE\.codex\skills\"
+
+# macOS/Linux:
+cp -r .codex/skills/* ~/.codex/skills/
+
+# Restart Codex
+exit
+codex
+```
+
+### Option 2: Download ZIP Package
 
 **Latest Release:** [codex-thinking-skills-v1.3.0.zip](codex-thinking-skills-v1.3.0.zip)
 
-### Installation
+### Installation from ZIP
 
 #### Windows
 ```powershell
@@ -466,4 +544,58 @@ See [code-intelligence/LANGUAGE_SUPPORT.md](code-intelligence/LANGUAGE_SUPPORT.m
 
 **Powered by LSP 3.17 for unprecedented accuracy and speed!**
 
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+### Report Issues
+Found a bug or have a feature request? [Open an issue](../../issues/new)
+
+### Contribute Code
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Make your changes
+4. Test thoroughly with multiple languages
+5. Submit a pull request to the `main` branch
+
+### Development Guidelines
+- Follow existing code style and patterns
+- Test with at least 3 different programming languages
+- Update documentation for any new features
+- Ensure LSP 3.17 compatibility
+- Add examples to demonstrate new capabilities
+
+### Share Your Experience
+- Star the repository if you find it useful
+- Share your success stories and use cases
+- Help others in discussions
+
+---
+
+## 📄 License
+
+Free to use for personal and commercial projects.
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with [Anthropic Claude](https://www.anthropic.com)
+- Powered by [Language Server Protocol 3.17](https://microsoft.github.io/language-server-protocol/)
+- Inspired by the developer community
+
+---
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](../../issues)
+- **Discussions**: [GitHub Discussions](../../discussions)
+- **Documentation**: See included MD files in the package
+
+---
+
 *Version 1.3.0 | January 8, 2026*
+
+**Release Branch:** `release/v1.3.0`
